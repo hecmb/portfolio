@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hector Moreno Bravo - Portfolio</title>
+     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= javascript_include_tag "//yandex.st/bootstrap/3.0.2/js/bootstrap.min.js" %>
+    <%= stylesheet_link_tag "//yandex.st/bootstrap/3.0.2/css/bootstrap.min.css", media: "all" %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+
+    <%#= favicon_link_tag 'favicon.ico' %>
+    <%= csrf_meta_tags %>
+
+  </head>
+
+  <body>
+    <%= render 'shared/navbar' %>
+    <%= yield %>
+  </body>
+</html>

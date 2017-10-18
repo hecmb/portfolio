@@ -1,0 +1,51 @@
+<div class="main">
+<%= image_tag "me.jpg", class: "picture" %>
+</br>
+</br>
+<%= link_to image_tag("linkedin.png"), "https://www.linkedin.com/in/hecmb/", :onclick=>"window.open(this.href,'create_company', 'height=600, width=600');return false;" %>
+</br>
+
+
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><%= link_to "Home", root_path(:page => 1), :style => 'color:black' %></li>
+  <li role="presentation"><%= link_to "Languages & Environments", root_path(:page => 2), :style => 'color:black'  %> </a></li>
+  <li role="presentation"><%= link_to "Projects", root_path(:page => 3), :style => 'color:black'  %></li>
+  <li role="presentation"><%= link_to "Clubs", root_path(:page =>  4), :style => 'color:black'  %></li>
+  <li role="presentation"><%= link_to "Super Powers", root_path(:page => 5), :style => 'color:black'  %></li>
+</ul>
+
+
+<%# DISPLAY X PAGE HERE %>
+
+	<% if @page_function == 1 || @page_function.nil? %>
+
+		<h3><ins><b> Bio: </b></ins></h3>
+
+		<%= render 'shared/home' %>
+
+	<% elsif @page_function == 2 %> 
+
+		<h3><ins><b> Languages: </b></ins></h3>
+
+		<%= render 'shared/languages' %>
+
+	<% elsif @page_function == 3 %> 
+
+		<h3><ins><b> Projects: </b></ins></h3>
+
+		<%= render 'shared/projects' %>
+
+	<% elsif @page_function == 4 %> 
+
+		<h3><ins><b> Clubs: </b></ins></h3>
+
+		<%= render 'shared/clubs' %>
+
+	<% elsif @page_function == 5 %> 
+
+		<h3><ins><b>  Superpowers: </b></ins></h3>
+
+		<%= render 'shared/superpowers' %>
+
+	<% end %>	
+</div>
