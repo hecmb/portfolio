@@ -12,11 +12,8 @@
 
 ActiveRecord::Schema.define(version: 20171016203831) do
 
-  create_table "function", force: :cascade do |t|
-    t.integer "function"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "pages", force: :cascade do |t|
     t.integer "function"
