@@ -104,6 +104,16 @@ html h4 {
   zoom: 40%;
 }
 
+#resume {
+  margin:100px auto !important;
+  display:block;
+  text-align: center;
+  img {
+    height:1200px;
+    width:950px;
+  }
+}
+
 
 @media only screen and (min-device-width: 320px) and (max-device-width : 736px) {
 
@@ -131,6 +141,19 @@ html h4 {
   height:170px;
   width:170px;
   border: 7px solid white;
+}
+
+#resume {
+  margin:100px auto !important;
+  display:block;
+  text-align: center;
+  img {
+    height:300px;
+    width:250px !important;
+  }
+  img:hover {
+    zoom:130% !important;
+  }
 }
 
 }
